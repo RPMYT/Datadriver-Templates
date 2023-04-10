@@ -1,0 +1,33 @@
+{
+  "name": "Armour Template",
+  "identifier": "armor",
+  "type": "template",
+  "data": {
+    "mods": [],
+    "class": "net.minecraft.item.ItemArmor",
+    "methods": {
+      "<init>()V": [
+        "ALOAD 0",
+        "LDC __MATERIAL",
+        "INVOKESTATIC io/github/rpmyt/datadriver/util/ArmourMaterials.get(Ljava/lang/String;)Lnet/minecraft/item/ItemArmor$ArmorMaterial;",
+        "LDC __RENDER_INDEX",
+        "LDC __SLOT",
+        "INVOKESPECIAL net/minecraft/item/ItemArmor.<init>(Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V",
+        "ALOAD 0",
+        "LDC __NAME",
+        "INVOKEVIRTUAL net/minecraft/item/Item.setUnlocalizedName(Ljava/lang/String;)Lnet/minecraft/item/Item;",
+        "RETURN"
+      ],
+      "getArmorTexture(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/Entity;ILjava/lang/String;)Ljava/lang/String;": [
+        "LDC __TEXTURE",
+        "ARETURN"
+      ]
+    },
+    "placeholders": {
+      "<init>$__MATERIAL#string": "ArmorMaterial",
+      "<init>$__RENDER_INDEX#int": "RenderIndex",
+      "<init>$__SLOT#int": "ArmorSlot",
+      "getArmorTexture$__TEXTURE#string": "ArmorTexturePath"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Armour Material Template",
+  "identifier": "armor_material",
+  "type": "template",
+  "data": {
+    "mods": [],
+    "class": "java.lang.Object",
+    "methods": {
+      "<init>()V": [
+        "ALOAD 0",
+        "INVOKESPECIAL java/lang/Object.<init>()V",
+        "LDC __MATNAME",
+        "LDC __DURABILITY",
+        "ICONST_4",
+        "NEWARRAY I",
+        "DUP",
+        "ICONST_0",
+        "LDC __HELMET_PROTECTION",
+        "IASTORE",
+        "DUP",
+        "ICONST_1",
+        "LDC __CHEST_PROTECTION",
+        "IASTORE",
+        "DUP",
+        "ICONST_2",
+        "LDC __LEG_PROTECTION",
+        "IASTORE",
+        "DUP",
+        "ICONST_3",
+        "LDC __FOOT_PROTECTION",
+        "IASTORE",
+        "LDC __ENCHANTABILITY",
+        "INVOKESTATIC net/minecraftforge/common/util/EnumHelper.addArmorMaterial(Ljava/lang/String;I[II)Lnet/minecraft/item/ItemArmor$ArmorMaterial;",
+        "LDC __MATNAME",
+        "INVOKESTATIC io/github/rpmyt/datadriver/util/ArmourMaterials.add(Lnet/minecraft/item/ItemArmor$ArmorMaterial;Ljava/lang/String;)V",
+        "RETURN"
+      ]
+    },
+    "placeholders": {
+      "<init>$__MATNAME#string": "MaterialName",
+      "<init>$__DURABILITY#int": "MaterialDurability",
+      "<init>$__HELMET_PROTECTION#int": "HelmetArmor",
+      "<init>$__CHEST_PROTECTION#int": "ChestplateArmor",
+      "<init>$__LEG_PROTECTION#int": "LeggingsArmor",
+      "<init>$__FOOT_PROTECTION#int": "BootsArmor",
+      "<init>$__ENCHANTABILITY#int": "MaterialEnchantability"
+    }
+  }
+}
